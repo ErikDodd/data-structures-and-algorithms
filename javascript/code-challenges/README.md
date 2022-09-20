@@ -29,6 +29,12 @@ When you finish the assignment each day, make a new pull request from your daily
 
 Attributions:
 
+Code Challenge 01:
+
 Thanks to Cianenry, Mehtab, and Maximo for helping me with Problem 4.
 
 Thanks to Adam for demoing how to successfully solve problem 5 and 6. I have having trouble solving these but he was able to walk us through it.
+
+Code Challenge 02:
+
+Thanks to Mehtab for helping me with my syntax error on problem 1. I needed to move push to directly after the array.
