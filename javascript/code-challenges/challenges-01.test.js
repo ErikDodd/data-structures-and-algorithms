@@ -12,7 +12,7 @@ const addOne = (arr) => {
   // Solution code here...
   const newArr = [];
   arr.forEach((v, i) => {
-    newArr.push(v + 1)
+    newArr.push(v + 1);
   });
   return newArr;
 };
@@ -29,7 +29,7 @@ const addExclamation = (arr) => {
   // Solution code here...
   const newArr = [];
   arr.forEach((v, i) => {
-    newArr.push(v + '!')
+    newArr.push(v + '!');
   });
   return newArr;
 };
@@ -46,7 +46,7 @@ const allUpperCase = (arr) => {
   // Solution code here...
   const newArr = [];
   arr.forEach((v, i) => {
-    newArr.push(v.toUpperCase())
+    newArr.push(v.toUpperCase());
   });
   return newArr;
 };
@@ -93,14 +93,18 @@ Return the modified array.
 
 const addValues = (arr, value) => {
   // Solution code here...
-  arr.forEach((v) => {
-    value.push(v);
-  });
+  arr.push(value);
 };
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
-  
+  arr = Array(times);
+  arr.fill(0);
+  arr.forEach(() => {
+    arr.shift();
+    callback(arr, num);
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -123,6 +127,14 @@ This function should use forEach to populate your grocery list based on the stor
 
 const createList = (availableItems) => {
   // Solution code here...
+  const returnArr = [];
+    // iterate through availableItems, if available == true, push the name
+  availableItems.forEach(fruit => {
+    if (fruit.available) {
+      returnArr.push(fruit.name);
+    }
+  });
+  return returnArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
