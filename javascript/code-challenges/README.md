@@ -30,3 +30,5 @@ When you finish the assignment each day, make a new pull request from your daily
 Attributions:
 
 Thanks to Cianenry, Mehtab, and Maximo for helping me with Problem 4.
+
+Thanks to Adam for demoing how to successfully solve problem 5 and 6. I have having trouble solving these but he was able to walk us through it.
