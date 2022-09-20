@@ -38,3 +38,5 @@ Thanks to Adam for demoing how to successfully solve problem 5 and 6. I have hav
 Code Challenge 02:
 
 Thanks to Mehtab for helping me with my syntax error on problem 1. I needed to move push to directly after the array.
+
+Thanks to Justin Hammerly for helping me refractor my code for problems 2 & 3. The code passed but it had some redundancies that he kindly pointed out and I removed.
