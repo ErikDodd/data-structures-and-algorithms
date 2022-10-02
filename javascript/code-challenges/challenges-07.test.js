@@ -1,5 +1,7 @@
 'use strict';
 
+const { slice } = require("cheerio/lib/api/traversing");
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
@@ -26,7 +28,8 @@ let starWarsPeople = [
 
 const sortStarWarsCharacters = (starWarsArr) => {
   // Solution code here...
-  return starWarsArr.
+  return starWarsArr.sort((a, b) =>
+    b.height - a.height);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -37,6 +40,8 @@ Write a function named removeThree that takes an index and an array. The functio
 
 const removeThree = (idx, arr) => {
   // Solution code here...
+  let removeNum = arr.splice(idx[-6], 5);
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -47,6 +52,7 @@ Write a function named joinArray that takes an array and joins all of the elemen
 
 const joinArray = (arr) => {
   // Solution code here...
+  return arr.join(' ');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -64,6 +70,9 @@ For example, if the input is 'Welcome', the output will be:
 
 const howMuchPencil = (str) => {
   let result = [];
+  for (let i = 0; i < str.length; i++) {
+    return slice(i);
+  }
   // Solution code here...
   return result;
 };
