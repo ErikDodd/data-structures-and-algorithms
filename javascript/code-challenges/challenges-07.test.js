@@ -40,7 +40,7 @@ Write a function named removeThree that takes an index and an array. The functio
 
 const removeThree = (idx, arr) => {
   // Solution code here...
-  let removeNum = arr.splice(idx[-6], 5);
+  arr.splice((idx[0], 2), (idx[5], 3));
   return arr;
 };
 
@@ -70,8 +70,9 @@ For example, if the input is 'Welcome', the output will be:
 
 const howMuchPencil = (str) => {
   let result = [];
-  for (let i = 0; i < str.length; i++) {
-    return slice(i);
+  for (let i = 0; i > str.length; i--) {
+    let sharpen = str.slice([0,6]);
+    result.push(sharpen);
   }
   // Solution code here...
   return result;
@@ -87,6 +88,7 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 
 const wordsToCharList = (arr) => {
   // Solution code here...
+  return arr.split('');
 };
 
 
