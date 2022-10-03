@@ -74,7 +74,6 @@ const howMuchPencil = (str) => {
     let sharpen = str.slice([0,6]);
     result.push(sharpen);
   }
-  // Solution code here...
   return result;
 };
 
