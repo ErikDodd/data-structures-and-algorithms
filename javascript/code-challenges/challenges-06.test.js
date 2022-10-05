@@ -24,9 +24,15 @@ Returns: ['dyoll', 'eimaj'];
 
 const getNames = (arr) => {
   // Solution code here...
-  return arr.map(e, i) => {
-    
+  return arr.map(e => {
+    let names = e.name;
+    let output = '';
+    for (let i = 0; i < names.length; i++) {
+      output = names[i] + output;
+    }
+    return output;
   }
+  );
 
 };
 
@@ -39,6 +45,8 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 
 const appendTheEnd = (str) => {
   // Solution code here...
+  let newString = str + ' The end.';
+  return newString;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -56,7 +64,9 @@ console.log(a) prints [1, 2, 3, 1]
 
 const appendFirstToLast = (arr) => {
   // Solution code here...
-
+  let first = arr[0];
+  console.log(first);
+  arr.push(first);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -76,6 +86,7 @@ console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 
 const addBirthYearProperty = (obj, year) => {
   // Solution code here...
+  obj.yearBorn = year;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -128,7 +139,7 @@ Run your tests from the console: jest challenges-02.test.js
 
 describe('Testing challenge 1', () => {
   test('It returns an array of names reversed', () => {
-    expect(getNames([{name:'lloyd', age: 32, shoeSize: 12}, {name:'jamie', age:21, shoeSize: 8}])).toStrictEqual(['dyoll', 'eimaj']);
+    expect(getNames([{ name: 'lloyd', age: 32, shoeSize: 12 }, { name: 'jamie', age: 21, shoeSize: 8 }])).toStrictEqual(['dyoll', 'eimaj']);
     expect(getNames([])).toStrictEqual([]);
   });
 });
