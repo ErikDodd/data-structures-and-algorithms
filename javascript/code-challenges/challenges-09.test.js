@@ -1,7 +1,7 @@
 'use strict';
 
-const { prop } = require("cheerio/lib/api/attributes");
-const { name } = require("mustache");
+// const { prop } = require("cheerio/lib/api/attributes");
+// const { name } = require("mustache");
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
