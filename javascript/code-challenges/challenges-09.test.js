@@ -1,8 +1,5 @@
 'use strict';
 
-// const { prop } = require("cheerio/lib/api/attributes");
-// const { name } = require("mustache");
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
@@ -13,8 +10,10 @@ E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
   // Solution code here...
+
   const maxNum = arr.reduce((a, b) => a > b ? a : b);
   return maxNum;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -24,16 +23,22 @@ Write a function named getCourseKeys that takes in the courseInfo object and ret
 
 For example: (['name', 'duration', 'topics', 'finalExam']).
 ------------------------------------------------------------------------------------------------ */
+
 const courseInfo = {
   name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks' },
+
+const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks'},
+
   topics: ['SMACSS', 'APIs', 'NodeJS', 'SQL', 'jQuery', 'functional programming'],
   finalExam: true
 };
 
 const getCourseKeys = (obj) => {
   // Solution code here...
+
   const keys = Object.keys(obj);
   return keys;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -46,6 +51,7 @@ Write a function named checkValues that takes in an object and a value and retur
 
 const checkValues = (obj, value) => {
   // Solution code here...
+
   let result = value in obj;
   return result;
   // let result = obj.hasOwnProperty(value);
@@ -73,8 +79,9 @@ HR has asked you to change the data to make it easier to print so that it looks 
 
 const updateNumbers = (obj) => {
   // Solution code here...
-  let newNum = obj.replaceAll('').join('');
-  return newNum;
+  const keys = Object.keys(obj);
+  return keys.map(e => e + ': ' + obj[e]);
+
 };
 
 
@@ -130,11 +137,7 @@ const characters = [
 
 const getHouses = (arr) => {
   let houses = [];
-  // Solution code here...
-  let houseNames = arr.map((val, idx) => {
-    val.house;
-    houses.push(houseNames);
-  });
+  arr.forEach(e => houses.push(e.house));
   return houses;
 };
 

@@ -25,3 +25,18 @@ You can see the results of your tests online in the "Actions" tab of your reposi
 ## Assignment Submission
 
 When you finish the assignment each day, make a new pull request from your daily challenge branch to your master branch and submit the PR URL in Canvas. You can submit a link to a pull request even if the pull request is closed.
+
+
+Attributions:
+
+Code Challenge 01:
+
+Thanks to Cianenry, Mehtab, and Maximo for helping me with Problem 4.
+
+Thanks to Adam for demoing how to successfully solve problem 5 and 6. I have having trouble solving these but he was able to walk us through it.
+
+Code Challenge 02:
+
+Thanks to Mehtab for helping me with my syntax error on problem 1. I needed to move push to directly after the array.
+
+Thanks to Justin Hammerly for helping me refractor my code for problems 2 & 3. The code passed but it had some redundancies that he kindly pointed out and I removed.
