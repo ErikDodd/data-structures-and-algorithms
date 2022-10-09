@@ -134,6 +134,13 @@ let starWarsData = [{
 
 let findMaleAndFemale = (data) => {
   // Solution code here...
+  // use Object.values??
+  let maleAndFemale = data.filter((e, i) => e.gender !== 'n/a');
+  let callName = maleAndFemale.map(e => e.name);
+  let arrToString = callName.toString();
+  let result = arrToString.replaceAll(',', ' and ');
+  return result;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
