@@ -67,7 +67,7 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 
 const divisibleByFiveTwoToThePower = (input) => {
   // Solution code here...
-  return input.map(e => e.filter(ex => ex % 5 === 0).map(num => Math.pow(num, 2)));
+  return input.map(e => e.filter(ex => (ex % 5 === 0) && (typeof ex === 'number' )).map(num => Math.pow(2, num)));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -134,6 +134,7 @@ let starWarsData = [{
 
 let findMaleAndFemale = (data) => {
   // Solution code here...
+  return data.filter(e => e.gender === 'male' || e.gender === 'female').map(el => (el.name)).join(' and ');
 };
 
 /* ------------------------------------------------------------------------------------------------
