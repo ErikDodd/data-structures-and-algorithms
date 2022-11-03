@@ -63,6 +63,10 @@ Note: You may not use the array's built-in length property.
 
 const countNumberOfElements = (arr) => {
   // Solution code here...
+  return arr.reduce(a => {
+    return a + 1;
+  }, 0
+  );
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -123,6 +127,12 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
   // Solution code here...
+  return arr.reduce((newArr, character) => {
+    newArr.push(character.name);
+    return newArr;
+  }, []
+  );
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -135,6 +145,11 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 
 const reversedString = (str) => {
   // Solution code here...
+  const arr = str.split('');
+  return arr.reduce((reversed,character) => {
+    return character + reversed;
+  }
+  );
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -188,6 +203,10 @@ const characters = [
 
 const countNumberOfChildren = (arr) => {
   // Solution code here...
+  return arr.reduce((a,b) => {
+    return b.children + 1;
+  }, 0
+  );
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -334,7 +353,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   test('It should return the total number of children', () => {
     expect(countNumberOfChildren(characters)).toStrictEqual(14);
   });
