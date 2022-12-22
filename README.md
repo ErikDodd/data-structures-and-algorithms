@@ -24,6 +24,8 @@ To run your tests
 
 ### Table of Contents
 
-[Array Reverse](python/docs/array_reverse/README.md)
+1. [Array Reverse](python/docs/array_reverse/README.md)
 
-[Array Insert Shift](python/docs/array_insert_shift/README.md)
+2. [Array Insert Shift](python/docs/array_insert_shift/README.md)
+
+3. [Array Binary Search](python/docs/array_binary_search/README.md)
