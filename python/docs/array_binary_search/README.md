@@ -7,7 +7,7 @@ Check the Resources section for details
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
 
-![Whiteboard Image](./insert_binary_search.png)
+![Whiteboard Image](./array_binary_search.png)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Discuss Why. What is the Big O space/time for this approach? -->
