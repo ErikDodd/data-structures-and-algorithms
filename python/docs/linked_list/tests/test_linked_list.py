@@ -1,5 +1,5 @@
 import pytest
-from linked_list.linked_list import Linked_List, insert_linked_list, head, insert_multiple_nodes, value_in_linked_list, value_not_in_linked_list, collection_values_in_linked_list
+from linked_list.linked_list import Linked_List
 
 
 def test_exists():
@@ -15,7 +15,7 @@ def test_insert_linked_list():
 
 
 def test_head():
-    linked = LinkedList()
+    linked = Linked_List()
     assert linked.head is None
 
 
