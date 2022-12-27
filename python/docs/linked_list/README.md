@@ -11,7 +11,7 @@ Create a Node class that has properties for the value stored in the Node, and a 
 - Create a Linked List class
 - Within your Linked List class, include a head property.
 - Upon instantiation, an empty Linked List should be created.
-- The class should contain the following methods
+- The class should contain the following methods:
 
 insert
 Arguments: value
