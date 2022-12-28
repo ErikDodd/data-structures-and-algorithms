@@ -4,23 +4,32 @@ class Node:
         self.next = next
 
 
-class Linked_List:
+class LinkedList:
+    pass
+
+
+class LinkedList:
     def __init__(self):
         self.head = None
 
-    linked_list = Linked_List()
+
+    def __str__(self, head=None):
+        if self.head:
+            return "NULL"
+
+    linked_list = LinkedList()
     linked_list_head = Node(7)
     print(linked_list_head.value)
 
     def insert(self, value=None):
-        newNode = Node(value)
+        new_node = Node(value)
         if self.head:
             current = self.head
             while current.next:
                 current = current.next
-            current.next = newNode
+            current.next = new_node
         else:
-            self.head = newNode
+            self.head = new_node
 
     def includes(self, value):
         current = self.head
@@ -31,4 +40,6 @@ class Linked_List:
         return False
 
     def __str__(self):
-        return f"{a} -> {b} -> {c} -> NULL"
+        pass
+
+
