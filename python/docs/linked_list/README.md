@@ -41,6 +41,8 @@ Returns: a string representing all the values in the Linked List, formatted as:
 
 ## Attributions
 
+Thank you to JB Tellez for demoing how to get the __str__ tests to pass. I was having difficulty doing that and understanding this prior to his demo.
+
 I used the following websites to help me with this code challenge:
 
 https://www.educative.io/answers/how-to-create-a-linked-list-in-python
