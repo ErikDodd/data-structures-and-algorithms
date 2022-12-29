@@ -12,34 +12,28 @@ class LinkedList:
     def __init__(self):
         self.head = None
 
+    def __str__(self, head=None, next=None):
+        current = self.head
+        text = ""
+        while current:
+            node_string = "{ " + current.value + " } -> "
+            text += node_string
+            current = current.next
+        return text + "NULL"
 
-    def __str__(self, head=None):
-        if self.head:
-            return "NULL"
 
     linked_list = LinkedList()
-    linked_list_head = Node(7)
-    print(linked_list_head.value)
 
     def insert(self, value=None):
-        new_node = Node(value)
-        if self.head:
-            current = self.head
-            while current.next:
-                current = current.next
-            current.next = new_node
-        else:
-            self.head = new_node
+        insert_node = Node(value)
+        previous_head = self.head
+        self.head = insert_node
+        self.head.next = previous_head
 
     def includes(self, value):
         current = self.head
-        while current != None:
-            if current.data == value:
-                return True
+        while current is None:
+            if current == value:
+                return False
             current = current.next
-        return False
-
-    def __str__(self):
-        pass
-
-
+        return True
