@@ -1,12 +1,33 @@
+class Node:
+    def __init__(self, value, next=None):
+        self.value = value
+        self.next = next
+
+
 class Stack:
     """
     Put docstring here
     """
 
     def __init__(self):
-        # initialization here
+        self.top = None
+
+    def push(self):
+        if self.top is None:
+            self.top = Node(value)
+            return
+        old = self.top
+        self.top = Node(value)
+        self.top.next = old
+
+    def pop(self):
+        popped = self.top
+        self.top = self.top.next
+        return popped.value
+
+    def peek(self):
         pass
 
-    def some_method(self):
-        # method body here
+
+    def is_empty(self):
         pass
