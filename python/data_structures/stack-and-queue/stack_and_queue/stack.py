@@ -1,3 +1,4 @@
+
 class Node:
     def __init__(self, value, next=None):
         self.value = value
@@ -12,7 +13,7 @@ class Stack:
     def __init__(self):
         self.top = None
 
-    def push(self):
+    def push(self, value=None):
         if self.top is None:
             self.top = Node(value)
             return
@@ -26,8 +27,22 @@ class Stack:
         return popped.value
 
     def peek(self):
-        pass
-
+        #Returns: Value of the node located at the top of the stack
+        #Should raise exception when called on empty stack
+        if self.top is None:
+            raise InvalidOperationError
+        if self.top is not None:
+            return self.value
 
     def is_empty(self):
-        pass
+        if self.top is None:
+            return True
+        return False
+
+
+class InvalidOperationError(Exception):
+    def __int__(self):
+
+
+    def __str__(self):
+        return self
