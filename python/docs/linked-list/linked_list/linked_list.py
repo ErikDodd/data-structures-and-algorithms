@@ -3,16 +3,17 @@ class Node:
         self.value = value
         self.next = next
 
-#class TargetError(Exception):
-   # pass
 
 class TargetError(Exception):
     def __int__(self):
         pass
 
+
     def __str__(self):
         return self
 
+
+# For some reason I can't run tests unless I have this other LinkedList class that is empty. I tried getting some help troubleshooting but no such luck.
 class LinkedList:
     pass
 
@@ -22,9 +23,7 @@ class LinkedList:
     def __init__(self):
         self.head = None
         self.next = next
-        # self.tail = None
         self.count = 0
-        # self.previous = None
 
     def __str__(self, head=None, next=None):
         current = self.head
@@ -80,18 +79,6 @@ class LinkedList:
             current.next = placeholder
             return self
         raise TargetError
-            # current = current.next
-            # current.next = value_to_insert
-            # placeholder = current.next
-            # new_node = Node(value_to_insert)
-            # current.next = value_to_insert
-            # current = current.next
-            # current = placeholder
-        # kiwi -> cumcumber  ->  banana  -> apple -> null
-        #            C
-        #                         P
-
-
 
     def insert_after(self, target_val, value_to_insert):
         current = self.head
@@ -106,4 +93,15 @@ class LinkedList:
             return self
         raise TargetError
 
-
+    def kth_from_end(self, n):
+        current = self.head
+        length = 0
+        while current is not None:
+            current = current.next
+            length += 1
+            if n > length or n < 0:
+                raise TargetError
+            current = self.head
+            for i in range(0, length - n):
+                current = current.next
+                return current.value
