@@ -3,7 +3,7 @@ import pytest
 from linked_list.linked_list import LinkedList
 
 
-# from data_structures.linked-list import LinkedList
+# from data_structures.linked-list-not-this-one import LinkedList
 
 
 def test_exists():
