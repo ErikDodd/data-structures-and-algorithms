@@ -59,7 +59,19 @@ Returns: Boolean indicating whether or not the queue is empty
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
+The Big 0 for time and space efficiency for Pop(), Push(), Peek() and is_empty() are all 0(1).
+This is because all these functions are essentially looking at the top of the queue or stack.
+Regardless of how many nodes are in the stack it will take the same time and space to run.
+
+
 ## API
 <!-- Description of each method publicly available to your Stack and Queue-->
 
-- push(), pop(), peek(), is_empty, __str__(), __init__()
+- push(), pop(), peek(), is_empty(), __str__(), __init__()
+
+## Attributions
+
+A special Thank you to Tammy Do my tutor. This challenge required less assistance
+but she helped me troubleshoot my import issues and talk through my code.
+
+A special thank you to Adam Owada for demo'ing how to get this code challenge started.
