@@ -1,4 +1,3 @@
-
 class Node:
     def __init__(self, value, next=None):
         self.value = value
@@ -22,17 +21,19 @@ class Stack:
         self.top.next = old
 
     def pop(self):
+        if self.top is None:
+            raise InvalidOperationError
         popped = self.top
         self.top = self.top.next
         return popped.value
 
     def peek(self):
-        #Returns: Value of the node located at the top of the stack
-        #Should raise exception when called on empty stack
+        # Returns: Value of the node located at the top of the stack
+        # Should raise exception when called on empty stack
         if self.top is None:
             raise InvalidOperationError
         if self.top is not None:
-            return self.value
+            return self.top.value
 
     def is_empty(self):
         if self.top is None:
@@ -42,7 +43,8 @@ class Stack:
 
 class InvalidOperationError(Exception):
     def __int__(self):
-
+        pass
+        # print("This is an Invalidation Operation")
 
     def __str__(self):
-        return self
+        return "Method not allowed on empty collection"
