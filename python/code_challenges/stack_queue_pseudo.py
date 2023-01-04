@@ -54,10 +54,16 @@ class PseudoQueue:
             self.stack_a.push(value)
 
 
-
     def dequeue(self):
         while self.stack_a.top:
             temp = self.stack_a.pop()
             self.stack_b.push(temp)
         return self.stack_b.pop()
 
+class InvalidOperationError(Exception):
+    def __int__(self):
+        pass
+        # print("This is an Invalidation Operation")
+
+    def __str__(self):
+        return "Method not allowed on empty collection"
