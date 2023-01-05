@@ -72,6 +72,7 @@ Regardless of how many nodes are in the stack it will take the same time and spa
 ## Attributions
 
 A special Thank you to Tammy Do my tutor. This challenge required less assistance
-but she helped me troubleshoot my import issues and talk through my code.
+but she helped me troubleshoot my import issues and talk through my code. She has been a great help
+and has made it easier for me to learn.
 
 A special thank you to Adam Owada for demo'ing how to get this code challenge started.
