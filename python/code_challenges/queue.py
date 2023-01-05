@@ -30,15 +30,12 @@ class Queue:
     def peek(self):
         # Returns: Value of the node located at the front of the queue
         # Should raise exception when called on empty stack
-        if self.front is None:
-            raise InvalidOperationError
-        if self.front is not None:
-            return self.front.value
+        pass
 
     def is_empty(self):
         # Returns: Boolean indicating whether or not the queue is empty
         if self.front is None:
-            return True
+            raise InvalidOperationError
         if self.front is not None:
             return self.value
 
@@ -48,4 +45,4 @@ class InvalidOperationError(Exception):
         pass
 
     def __str__(self):
-        return "True"
+        return self
