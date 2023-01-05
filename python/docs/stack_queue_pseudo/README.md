@@ -22,7 +22,6 @@
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
-
 Big O:
 
 Time: O(n) - Linear Time - As the amount of items in the pseudo queue grows, it will increase linearly to push and pop all the different items from stack to stack.
@@ -37,3 +36,4 @@ and push to move elements over from stack_a to stack_b. This allows the
 two stacks to act like a Pseudo Queue. You move all the elements from stack A to
 stack B and then elements from stack B back over to a after new element has been
 added to stack A.
+
