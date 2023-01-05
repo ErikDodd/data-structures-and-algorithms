@@ -1,4 +1,4 @@
-# Challenge Summary
+# Challenge Summary - Code Challenge 11 - Pseudo Queue
 <!-- Description of the challenge -->
 
 - Create a new class called pseudo queue.
@@ -17,9 +17,11 @@
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
+![Whiteboard Image](stack_queue_pseudo.png)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
 
 Big O:
 
@@ -29,3 +31,9 @@ Space: O(n) - Linear Complexity - As the amount of items in the pseudo queue gro
 
 ## Solution
 <!-- Show how to run your code, and examples of it in action -->
+
+The approach I used was to use two stacks and simply a combination of pop
+and push to move elements over from stack_a to stack_b. This allows the
+two stacks to act like a Pseudo Queue. You move all the elements from stack A to
+stack B and then elements from stack B back over to a after new element has been
+added to stack A.
