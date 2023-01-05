@@ -1,55 +1,39 @@
-class Node:
-    def __init__(self, value, next=None):
-        self.value = value
-        self.next = next
+from code_challenges.queue import Queue, Node, InvalidOperationError
+
 
 class AnimalShelter:
     def __init__(self):
-        self.front = None
-        self.rear = None
-
+        self.dogs = Queue()
+        self.cats = Queue()
 
     def enqueue(self, animal):
-        if self.rear is None:
-            temp = Node(animal)
-            self.rear.push(temp)
-            return self
-        if self.rear:
-            temp = Node(animal)
-            self.rear
+        if animal.type != "dog" and animal.type != "cat":
+            raise InvalidOperationError
+        if animal.type == "dog":
+            self.dogs.enqueue(animal)
+        if animal.type == "cat":
+            self.cats.enqueue(animal)
 
-
-        pass
-        #if self.rear:
-            #self.rear.next = Node(animal)
-            #self.rear = self.rear.next
-            #return
-        #self.rear = self.front = Node(animal)
-
-
-    def dequeue(self, perf):
-
-        pass
-        #if self.front is None:
-            #raise InvalidOperationError
-        #dequeued = self.front
-        #self.front = self.front.next
-
-    class InvalidOperationError(Exception):
-        def __int__(self):
-            pass
-        def __str__(self):
-            return self
+    def dequeue(self, pref=""):
+        if pref == "dog":
+            return self.dogs.dequeue()
+        if pref == "cat":
+            return self.cats.dequeue()
 
 
 class Dog:
-    def __init__(self, value, next=None):
-        self.value = value
-        self.next = next
 
+    def __init__(self):
+        self.type = "dog"
+
+    def __repr__(self):
+        return "dog"
 
 
 class Cat:
-    def __init__(self, value, next=None):
-        self.value = value
-        self.next = next
+
+    def __init__(self):
+        self.type = "cat"
+
+    def __repr__(self):
+        return "cat"
