@@ -23,14 +23,31 @@ class BinaryTree:
     def pre_order(self, root=None, nodes=None):
         if root is None:
             root = self.root
-            print(root)
-        if nodes in None:
+            #return
+        if nodes is None:
+            print("Nodes is None")
+            nodes = []
+        #print(root.value)
+        nodes.append(root.value)
+        if root.left:
+            self.pre_order(root.left, nodes)
+        if root.right:
+            self.pre_order(root.right, nodes)
+        return nodes
+
+    def in_order(self, root=None, nodes=None):
+        # method body here
+        if root is None:
+            root = self.root
+        if nodes is None:
             nodes = []
         if root.left:
-            self.pre_order(root.left)
+            self.in_order(root.left, nodes)
+        #print(root.value)
+        nodes.append(root.value)
         if root.right:
-            self.pre_order(root.right)
-
+            self.in_order(root.right, nodes)
+        return nodes
 
 
 

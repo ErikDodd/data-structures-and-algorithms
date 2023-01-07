@@ -14,7 +14,7 @@ def test_pre_order(tree):
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+
 def test_in_order(tree):
     actual = tree.in_order()
     expected = ["d", "b", "e", "a", "f", "c", "g"]
