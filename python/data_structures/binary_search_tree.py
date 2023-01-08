@@ -16,19 +16,33 @@ class BinarySearchTree(BinaryTree):
         if self.root is None:
             self.root = new_node
             return self.root.value
+        current = self.root
         while True:
-            if self.root.left is None:
-                self.root.left = new_node
-                return self.root.left.value
-            if self.root.right is None:
-                self.root.right = new_node
-                return self.root.right.value
+            if value < current.value:
+                if current.left is None:
+                    current.left = new_node
+                    return current.left.value
+                    break
+                current = current.left
+            else:
+                if current.right is None:
+                    current.right = new_node
+                    return current.right.value
+                    break
+                current = current.right
+
+    # Returns: boolean indicating whether or not the value is in the tree at least once.
+    def contains(self, value):
+        current = self.root
+        while current:
+            if current.value == value:
+                return True
+            elif value < current.value:
+                current = current.left
+            else:
+                current = current.right
+        return False
 
 
 
 
-
-
-    def contains(self):
-        #Returns: boolean indicating whether or not the value is in the tree at least once.
-        pass
