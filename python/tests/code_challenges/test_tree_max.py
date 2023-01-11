@@ -31,3 +31,10 @@ def test_max_val_negative():
     actual = tree.find_maximum_value()
     expected = -2
     assert actual == expected
+
+def test_max_val_empty():
+    tree = BinaryTree()
+    actual = tree.find_maximum_value()
+    expected = None
+    assert actual == expected
+
