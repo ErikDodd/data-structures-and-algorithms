@@ -14,11 +14,21 @@ class Queue:
         self.rear = None
 
     def enqueue(self, value):
+        new_node = Node(value)
+        if self.front is None:
+            self.front = new_node
+
         if self.rear:
-            self.rear.next = Node(value)
-            self.rear = self.rear.next
-            return
-        self.rear = self.front = Node(value)
+            self.rear.next = new_node
+            self.rear = new_node
+        else:
+            self.rear = new_node
+        return
+        # if self.rear:
+        #     self.rear.next = Node(value)
+        #     self.rear = self.rear.next
+        #     return
+        # self.rear = self.front = Node(value)
 
     def dequeue(self):
         if self.front is None:
@@ -33,11 +43,12 @@ class Queue:
         pass
 
     def is_empty(self):
+        return self.front is None
         # Returns: Boolean indicating whether or not the queue is empty
-        if self.front is None:
-            raise InvalidOperationError
-        if self.front is not None:
-            return self.value
+        #if self.front is None:
+           # return None
+       # if self.front is not None:
+           # return self
 
 
 class InvalidOperationError(Exception):
