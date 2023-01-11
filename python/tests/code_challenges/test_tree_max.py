@@ -22,3 +22,12 @@ def test_max_val_positive():
     actual = tree.find_maximum_value()
     expected = 15
     assert actual == expected
+
+def test_max_val_negative():
+    tree = BinaryTree()
+    tree.root = Node(-5)
+    tree.root.left = Node(-15)
+    tree.root.right = Node(-2)
+    actual = tree.find_maximum_value()
+    expected = -2
+    assert actual == expected
