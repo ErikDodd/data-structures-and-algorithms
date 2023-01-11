@@ -52,14 +52,14 @@ class BinaryTree:
     def find_maximum_value(self):
         if self.root is None:
             return None
-        max_value = self.root.value
-        left_max = find_maximum_value(self.root.left)
-        if left_max is not None:
-            max_value = max(max_value, left_max)
-        right_max = find_maximum_value(self.root.right)
-        if right_max is not None:
-            max_value = max(max_value, right_max)
+        nodes = self.pre_order()
+        # nodes = [1,2,3,4,5,2]
+        max_value = float('-inf')
+        for value in nodes:
+            if max_value < value:
+                max_value = value
         return max_value
+
 
 
 
