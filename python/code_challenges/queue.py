@@ -33,9 +33,21 @@ class Queue:
     def dequeue(self):
         if self.front is None:
             raise InvalidOperationError
+
+        # Adam refactored this to get CC 17 to pass tests
+        # not sure if I need to actually need to adjust this
+        # since Tammy helped me refactor enqueue()
+
+        if self.front == self.rear:
+            dequeued = self.front
+            self.front = self.rear = None
+            return dequeued.value
+
         dequeued = self.front
         self.front = self.front.next
         return dequeued.value
+
+
 
     def peek(self):
         # Returns: Value of the node located at the front of the queue
