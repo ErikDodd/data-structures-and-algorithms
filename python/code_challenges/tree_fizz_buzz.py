@@ -4,16 +4,18 @@ from code_challenges.queue import Queue
 
 
 def fizz_buzz_tree(tree):
+    # Make a copy of the KaryTree using Clone
     fizzy_tree = KaryTree.clone(tree)
+    # Check to see if the KaryTree is Empty
     if tree.root is None:
         return None
     queue = Queue()
+    # Add the root of the tree to the queue
     queue.enqueue(fizzy_tree.root)
     # We enter the while loop if there is something in the queue
     while not queue.is_empty():
         temp_dequeue_node = queue.dequeue()
-        node_value = temp_dequeue_node.value
-        node_value = fizz_buzz_helper(node_value)
+        temp_dequeue_node.value = fizz_buzz_helper(temp_dequeue_node.value)
         #print(f"The result of fizz_buzz_result: {node_value}")
 
         # add children to queue
@@ -29,9 +31,9 @@ def fizz_buzz_tree(tree):
 def fizz_buzz_helper(value):
     if value % 3 == 0 and value % 5 == 0:
         return "FizzBuzz"
-    if value % 3 == 0:
+    elif value % 3 == 0:
         return "Fizz"
-    if value % 5 == 0:
+    elif value % 5 == 0:
         return "Buzz"
     else:
         return str(value)
