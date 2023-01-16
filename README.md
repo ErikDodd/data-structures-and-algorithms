@@ -29,3 +29,25 @@ To run your tests
 2. [Array Insert Shift](python/docs/array_insert_shift/README.md)
 
 3. [Array Binary Search](python/docs/array_binary_search/README.md)
+
+4. [Linked List](python/docs/linked_list/README.md)
+
+5. [Linked List Insertions](python/docs/linked_list_insertions/README.md)
+
+6.  [Linked List Kth Value](python/docs/linked_list_kth/README.md)
+
+7.  [Linked List Zip](python/docs/linked_list_zip/README.md)
+
+8. [Stack and Queue Implementation](python/docs/stack_and_queue/README.md)
+
+9. [Stack and Queue Animal Shelter](python/docs/stack_queue_animal_shelter/README.md)
+
+10. [Stack and Queue Brackets](python/docs/stack_queue_brackets/README.md)
+
+11. [Trees](python/docs/trees/README.md)
+
+12. [Tree Max](python/docs/tree_max/README.md)
+
+13. [Tree Breadth First](python/docs/tree_breadth_first/README.md)
+
+14. [Tree Fizz Buzz](python/docs/tree_fizz_buzz/README.md)

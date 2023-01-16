@@ -14,6 +14,7 @@ class LinkedList:
         self.count = 0
 
 
+
     def __str__(self, head=None, next=None):
         current = self.head
         text = ""
@@ -22,6 +23,7 @@ class LinkedList:
             text += node_string
             current = current.next
         return text + "NULL"
+
 
     linked_list = LinkedList()
 
@@ -80,7 +82,6 @@ class LinkedList:
             current = current.next
             current.next = placeholder
             return self
-        raise
 
     def kth_from_end(self, k):
         slow = fast = self.head
