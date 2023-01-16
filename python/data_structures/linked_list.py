@@ -3,20 +3,8 @@ class Node:
         self.value = value
         self.next = next
 
-
-class TargetError(Exception):
-    def __int__(self):
-        pass
-
-
-    def __str__(self):
-        return self
-
-
-# For some reason I can't run tests unless I have this other LinkedList class that is empty. I tried getting some help troubleshooting but no such luck.
 class LinkedList:
     pass
-
 
 class LinkedList:
 
@@ -24,6 +12,8 @@ class LinkedList:
         self.head = None
         self.next = next
         self.count = 0
+
+
 
     def __str__(self, head=None, next=None):
         current = self.head
@@ -33,6 +23,7 @@ class LinkedList:
             text += node_string
             current = current.next
         return text + "NULL"
+
 
     linked_list = LinkedList()
 
@@ -91,17 +82,36 @@ class LinkedList:
             current = current.next
             current.next = placeholder
             return self
-        raise TargetError
 
-    def kth_from_end(self, n):
-        current = self.head
-        length = 0
-        while current is not None:
-            current = current.next
-            length += 1
-            if n > length or n < 0:
+    def kth_from_end(self, k):
+        slow = fast = self.head
+        if fast.next is None:
+            return fast.value
+        print(f"The value of fast: {fast.value}")
+        print(f"The value of slow: {slow.value}")
+        for i in range(k):
+            if not fast:
                 raise TargetError
-            current = self.head
-            for i in range(0, length - n):
-                current = current.next
-                return current.value
+        fast = fast.next
+        print(f"The new value of fast: {fast.value}")
+        while fast.next:
+            fast = fast.next
+            # print(f"The WHILE new value of fast: {fast.value}")
+            slow = slow.next
+            # print(f"The WHILE new value of slow: {slow.value}")
+        if k == 0:
+            return fast.value
+        elif k == 1:
+            return slow.value
+        elif k == 2:
+            return self.head.value
+
+
+
+class TargetError(BaseException):
+
+    def __int__(self):
+        return self
+
+    def __str__(self):
+        return self
