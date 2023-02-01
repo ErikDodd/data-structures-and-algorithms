@@ -53,3 +53,7 @@ To run your tests
 14. [Tree Fizz Buzz](python/docs/tree_fizz_buzz/README.md)
 
 15. [Insertion Sort](sorting/insertion/README.md)
+
+16. [Hashtable](python/docs/hashtable/README.md)
+
+17. [Hashmap Repeated Word](python/docs/hashtable_repeated_word/README.md)
