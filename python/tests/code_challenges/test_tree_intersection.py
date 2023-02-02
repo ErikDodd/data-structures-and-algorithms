@@ -24,6 +24,36 @@ def test_tree_intersection():
 
     assert sorted(actual) == sorted(expected)
 
+def test_tree_intersection_string():
+
+    tree_a = BinaryTree()
+    values = ["a", "b", "c"]
+    add_values_to_empty_tree(tree_a, values)
+
+    tree_b = BinaryTree()
+    values = ["a", "b", "d"]
+    add_values_to_empty_tree(tree_b, values)
+
+    actual = tree_intersection(tree_a, tree_b)
+    expected = ["a", "b"]
+
+    assert sorted(actual) == sorted(expected)
+
+def test_tree_intersection_string_duplicates():
+
+    tree_a = BinaryTree()
+    values = ["a", "a", "b", "b", "c", "c"]
+    add_values_to_empty_tree(tree_a, values)
+
+    tree_b = BinaryTree()
+    values = ["a", "b", "d", "a", "b", "d"]
+    add_values_to_empty_tree(tree_b, values)
+
+    actual = tree_intersection(tree_a, tree_b)
+    expected = ["a", "b"]
+
+    assert sorted(actual) == sorted(expected)
+
 
 def add_values_to_empty_tree(tree, values):
     """
