@@ -57,3 +57,5 @@ To run your tests
 16. [Hashtable](python/docs/hashtable/README.md)
 
 17. [Hashmap Repeated Word](python/docs/hashtable_repeated_word/README.md)
+
+18. [Tree Intersection](python/docs/tree_intersection/README.md)
